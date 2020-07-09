@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Button</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .switchButton {
+            display: inline-block;
+        }
+        .switch {
+            visibility: hidden;
+            position: relative;
+            display: none;
+        }
+        .switch+label {
+            display: inline-block;
+            position: relative;
+            padding: 3px 0px 0px 46px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .switch+label:before,
+        .switch+label:after {
+            display: block;
+            position: absolute;
+            content: "";
+            left: 3px;
+            top: 3px;
+            bottom: 3px;
+            transition: 0.4s;
+        }
+        .switch+label:before {
+            right: 2px;
+            border-radius: 75px;
+            background-color: #eee;
+            background-color: #ddd;
+            border-radius: 150px;
+            cursor: pointer;
+            height: 15px;
+            width: 35px;
+        }
+        .switch+label:after {
+            border-radius: 100%;
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3)
+        }
+        .switch:checked+label:before {
+            background-color: #b3e6ff;
+        }
+        .switch:checked+label:after {
+            margin-left: 21px;
+            background-color: #008bcf;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="switchButton">
+        <input type="checkbox" class="switch" id="newcars" checked />
+        <label for="newcars">NEW CARS</label>
+    </div>
+</body>
+
+</html>

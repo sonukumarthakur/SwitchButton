@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Button</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        /* css */
+        .switchButton {
+            display: inline-block;
+        }
+        .switchButton .switch {
+            visibility: hidden;
+            position: relative;
+            display: none;
+        }
+        .switchButton .switch+label {
+            display: inline-block;
+            position: relative;
+            padding: 4px 0px 0px 43px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .switchButton .switch+label:before,
+        .switchButton .switch+label:after {
+            display: block;
+            position: absolute;
+            content: "";
+            left: 3px;
+            top: 3px;
+            bottom: 3px;
+            transition: 0.4s;
+        }
+        .switchButton .switch+label:before {
+            right: 2px;
+            border-radius: 75px;
+            background-color: #ddd;
+            border-radius: 150px;
+            cursor: pointer;
+            height: 14px;
+            width: 30px;
+            border: solid 1px #ddd;
+        }
+        .switchButton .switch+label:after {
+            border-radius: 100%;
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3)
+        }
+        .switchButton .switch:checked+label:before {
+            background-color: #caeeff;
+            border: solid 1px #008bcf;
+        }
+        .switchButton .switch:checked+label:after {
+            margin-left: 16px;
+            background-color: #008bcf;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="switchButton">
+        <input type="checkbox" class="switch" id="newcars" checked />
+        <label for="newcars">NEW CARS</label>
+    </div>
+</body>
+
+</html>
